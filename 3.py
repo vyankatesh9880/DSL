@@ -3,11 +3,11 @@ salaries = [30000.0, 20000.0, 50000.0, 10000.0, 40000.0, 60000.0, 35000.0]
 def selection_sort(list):
     n = len(list)
     for i in range(n):
-        min_i = i
+        min = i
         for j in range(i + 1, n):
-            if list[j] < list[min_i]:
+            if list[j] < list[min]:
                 min_i = j
-        list[i], list[min_i] = list[min_i], list[i]
+        list[i], list[min] = list[min], list[i]
 
 def bubble_sort(list):
     n = len(list)
