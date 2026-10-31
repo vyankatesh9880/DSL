@@ -39,5 +39,7 @@ print("Members with 0 books:", zeros)
 print("Most frequently borrowed book:", most_book)
 
 
+print("Time: O(n) for average, highest/lowest, zero count; O(1) for most borrowed")
+print("Space: O(1) for all operations")
 
 
