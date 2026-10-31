@@ -28,11 +28,6 @@ def display(root):
         print(root.data, end=" ")
         display(root.right)
 
-def smallest(root):
-    while root.left is not None:
-        root = root.left
-    return root
-
 def delete(root, data):
     if root is None:
         return None
@@ -45,7 +40,10 @@ def delete(root, data):
             return root.right
         if root.right is None:
             return root.left
-        small = smallest(root.right)
+        # two children: replace with smallest value of right side
+        small = root.right
+        while small.left is not None:
+            small = small.left
         root.data = small.data
         root.right = delete(root.right, small.data)
     return root
@@ -68,6 +66,7 @@ while True:
             print("Not found")
     else:
         break
+
 
 
     
