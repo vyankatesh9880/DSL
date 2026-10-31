@@ -6,7 +6,7 @@ def selection_sort(list):
         min = i
         for j in range(i + 1, n):
             if list[j] < list[min]:
-                min_i = j
+                min = j
         list[i], list[min] = list[min], list[i]
 
 def bubble_sort(list):
